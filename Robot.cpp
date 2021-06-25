@@ -1,12 +1,16 @@
+#include "./Robot.h"
 #include "Arduino.h"
-#include "Robot.h"
+#include "./Ultrasonic.h"
+#include "./Motor.h"
 
-Robot::Robot(UltrasonicSensor front, UltrasonicSensor back, Motor left, Motor right) {
-    _frontUS = front;
-    _backUS = back;
-    _leftMotor = left;
-    _rightMotor = right;
+Robot::Robot(Ultrasonic usFront, Ultrasonic usBack, Motor motorLeft, Motor motorRight) {
+  _usFront = usFront;
+  _usBack = usBack;
+  _motorLeft = motorLeft;
+  _motorRight = motorRight;
 }
 
 // Update this method to program your robot!
-void Robot::drive() {}
+void Robot::drive() {
+  
+}

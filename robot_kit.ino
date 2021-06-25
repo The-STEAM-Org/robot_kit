@@ -1,8 +1,9 @@
-#include "Robot.h"
-#include "UltrasonicSensor.h"
-#include "Motor.h"
+#include "./Robot.h"
+#include "./Ultrasonic.h"
+#include "./Motor.h"
 
 // Define pins
+// TODO: CHANGE THESE VALUES
 #define leftMotorEnable 0
 #define leftMotorSwitch1 0
 #define leftMotorSwitch2 0
@@ -18,8 +19,8 @@
 #define backUSEcho 0
 
 // Create objects
-UltrasonicSensor frontUS(frontUSTrig, frontUSEcho);
-UltrasonicSensor backUS(backUSTrig, backUSEcho);
+Ultrasonic frontUS(frontUSTrig, frontUSEcho);
+Ultrasonic backUS(backUSTrig, backUSEcho);
 
 Motor leftMotor(leftMotorEnable, leftMotorSwitch1, leftMotorSwitch2);
 Motor rightMotor(rightMotorEnable, rightMotorSwitch1, rightMotorSwitch2);
@@ -31,5 +32,5 @@ void setup() {
 }
 
 void loop() {
-    robot.drive();
+//    robot.drive();
 }

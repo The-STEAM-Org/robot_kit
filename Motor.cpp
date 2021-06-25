@@ -12,7 +12,18 @@ Motor::Motor(uint8_t enable, uint8_t input1, uint8_t input2) {
     pinMode(_input2, INPUT);
 }
 
+Motor::Motor() {
+  Serial.printf("DO NOT USE THIS CONSTRUCTOR!");
+  return;  
+}
+
 void Motor::setSpeed(float speed) {
+    // Make sure speed is in range [-100, 100]
+    if(speed > 100 || speed < 100) {
+      Serial.printf("Invalid Speed! Speeds should be between -100 and 100! Speed was %f", speed);
+      return;
+    }
+  
     // Set H-Bridge
     if(speed < 0) {
         digitalWrite(_input1, LOW);
