@@ -1,6 +1,6 @@
-#include "./Robot.h"
-#include "./Ultrasonic.h"
-#include "./Motor.h"
+#include "Robot.h"
+#include "Ultrasonic.h"
+#include "Motor.h"
 
 // Define pins
 // TODO: CHANGE THESE VALUES
@@ -27,10 +27,12 @@ Motor rightMotor(rightMotorEnable, rightMotorSwitch1, rightMotorSwitch2);
 
 Robot robot(frontUS, backUS, leftMotor, rightMotor);
 
-void setup() {
+void setup()
+{
     Serial.begin(9600);
 }
 
-void loop() {
-//    robot.drive();
+void loop()
+{
+    robot.drive();
 }
