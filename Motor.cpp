@@ -17,8 +17,11 @@ void Motor::setSpeed(int speed) {
     return;
   }
 
+  bool shouldBeReversed = speed < 0;
+  shouldBeReversed = _reversed ? !shouldBeReversed : shouldBeReversed;
+
   // Set H-Bridge polarity
-  if (speed > 0 && !_reversed) {
+  if (shouldBeReversed) {
     digitalWrite(_switch1, HIGH);
     digitalWrite(_switch2, LOW);
   } else {
