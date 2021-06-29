@@ -10,12 +10,13 @@
 
 class Robot {
 public:
-    Robot(Motor &leftMotor, Motor &rightMotor, Ultrasonic &frontUltrasonic, Ultrasonic &backUltrasonic);
-    void drive();
-private:
-    Motor leftMotor, rightMotor;
-    Ultrasonic frontUltrasonic, backUltrasonic;
-};
+  Robot(Motor &leftMotor, Motor &rightMotor, Ultrasonic &frontUltrasonic,
+        Ultrasonic &backUltrasonic);
+  void drive();
 
+private:
+  Motor leftMotor, rightMotor;
+  Ultrasonic frontUltrasonic, backUltrasonic;
+};
 
 #endif

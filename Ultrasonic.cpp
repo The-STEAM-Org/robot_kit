@@ -1,7 +1,6 @@
 #include "Ultrasonic.h"
 
-Ultrasonic::Ultrasonic(u_int8_t trig, u_int8_t echo)
-{
+Ultrasonic::Ultrasonic(u_int8_t trig, u_int8_t echo) {
   _trig = trig;
   _echo = echo;
 
@@ -10,8 +9,7 @@ Ultrasonic::Ultrasonic(u_int8_t trig, u_int8_t echo)
   pinMode(_echo, INPUT);
 }
 
-int Ultrasonic::getDistance()
-{
+int Ultrasonic::getDistance() {
   digitalWrite(_trig, LOW);
   delayMicroseconds(2);
 

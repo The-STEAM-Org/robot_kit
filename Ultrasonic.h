@@ -8,16 +8,15 @@
 
 #include "Arduino.h"
 
-class Ultrasonic
-{
+class Ultrasonic {
 public:
-    Ultrasonic(u_int8_t trig, u_int8_t echo);
-    Ultrasonic();
-    int getDistance();
+  Ultrasonic(u_int8_t trig, u_int8_t echo);
+  Ultrasonic();
+  int getDistance();
 
 private:
-    u_int8_t _trig;
-    u_int8_t _echo;
+  u_int8_t _trig;
+  u_int8_t _echo;
 };
 
 #endif
