@@ -15,3 +15,7 @@ ehthumbs_vista.db
 
 # vscode c++ config
 .vscode/c_cpp_properties.json
+
+# docs
+html
+latex
