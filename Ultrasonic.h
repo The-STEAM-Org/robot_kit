@@ -3,8 +3,8 @@
     Created by Akshat Adsule for the STEAM org
 */
 
-#ifndef Ultrasonic_h
-#define Ultrasonic_h
+#ifndef ULTRASONIC_H
+#define ULTRASONIC_H
 
 #include "Arduino.h"
 

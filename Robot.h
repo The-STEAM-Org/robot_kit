@@ -1,20 +1,21 @@
-#ifndef Robot_h
-#define Robot_h
+//
+// Created by akshat on 6/28/21.
+//
 
-#include "Arduino.h"
-#include "Ultrasonic.h"
+#ifndef ROBOT_H
+#define ROBOT_H
+
 #include "Motor.h"
+#include "Ultrasonic.h"
 
-class Robot
-{
+class Robot {
 public:
-  Robot(Ultrasonic usFront, Ultrasonic usBack, Motor motorLeft, Motor motorRight);
-  Robot();
-  void drive();
-
+    Robot(Motor &leftMotor, Motor &rightMotor, Ultrasonic &frontUltrasonic, Ultrasonic &backUltrasonic);
+    void drive();
 private:
-  Ultrasonic _usFront, _usBack;
-  Motor _motorLeft, _motorRight;
+    Motor leftMotor, rightMotor;
+    Ultrasonic frontUltrasonic, backUltrasonic;
 };
+
 
 #endif

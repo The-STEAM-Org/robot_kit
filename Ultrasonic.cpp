@@ -1,5 +1,4 @@
 #include "Ultrasonic.h"
-#include "Arduino.h"
 
 Ultrasonic::Ultrasonic(u_int8_t trig, u_int8_t echo)
 {
@@ -8,13 +7,7 @@ Ultrasonic::Ultrasonic(u_int8_t trig, u_int8_t echo)
 
   // Setup pins
   pinMode(_trig, OUTPUT);
-  pinMode(_echo, OUTPUT);
-}
-
-Ultrasonic::Ultrasonic()
-{
-  Serial.printf("DO NOT USE THIS CONSTRUCTOR!");
-  return;
+  pinMode(_echo, INPUT);
 }
 
 int Ultrasonic::getDistance()

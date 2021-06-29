@@ -1,17 +1,7 @@
-#include "./Robot.h"
-#include "Arduino.h"
-#include "./Ultrasonic.h"
-#include "./Motor.h"
+#include "Robot.h"
 
-Robot::Robot(Ultrasonic usFront, Ultrasonic usBack, Motor motorLeft, Motor motorRight)
-{
-  _usFront = usFront;
-  _usBack = usBack;
-  _motorLeft = motorLeft;
-  _motorRight = motorRight;
-}
+Robot::Robot(Motor &leftMotor, Motor &rightMotor, Ultrasonic &frontUltrasonic, Ultrasonic &backUltrasonic) : leftMotor(leftMotor), rightMotor(rightMotor), frontUltrasonic(frontUltrasonic), backUltrasonic(backUltrasonic) {}
 
-// Update this method to program your robot!
-void Robot::drive()
-{
+void Robot::drive() {
+  Serial.printf("Distance is %f\n", frontUltrasonic.getDistance());
 }
